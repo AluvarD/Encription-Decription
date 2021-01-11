@@ -1,0 +1,15 @@
+/.gradle/
+/gradle/
+/Problems/**/out/
+/Encryption-Decryption/task/out/
+/.idea/frameworkLessonHistory/
+/**/*.iml
+/**/*.html
+/**/*.txt
+/**/*.yaml
+/**/*.css
+/**/*.bat
+/**/*.jar
+/**/*.properties
+/**/*.xml
+/Encryption-Decryption/task/build/
