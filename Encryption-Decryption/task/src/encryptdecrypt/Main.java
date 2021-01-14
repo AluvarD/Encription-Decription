@@ -4,16 +4,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        encryptionDecryption();
+        encryptionDecryption(args);
     }
 
-    static void encryptionDecryption() {
-        Scanner scanner = new Scanner(System.in);
-        String mode = scanner.nextLine();
-        String input = scanner.nextLine();
-        int key = scanner.nextInt();
+    static void encryptionDecryption(String[] params) {
+        //Scanner scanner = new Scanner(System.in);
+        String mode = "enc";
+        String input = " ";
+        int key = 0;
         String output;
-
+        for (int i = 0; i < params.length; i++) {
+            if (params[i].equals("-mode")) {
+                mode = params[i + 1];
+            } else if (params[i].equals("-key")) {
+                key = Integer.parseInt(params[i + 1]);
+            } else if (params[i].equals("-data")) {
+                input = params[i + 1];
+            }
+        }
         switch (mode) {
             case "enc":
                 output = encrypt(input, key);
